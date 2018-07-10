@@ -1,0 +1,14 @@
+//
+// Created by dro on 26.06.18.
+//
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n,a,b;
+    cin >> n >> a >> b;
+    cout << 2*n*a*b << endl;
+    return 0;
+}
