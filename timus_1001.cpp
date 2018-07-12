@@ -4,7 +4,7 @@
 
 #include <vector>
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <iomanip>
 
 using namespace std;
@@ -16,7 +16,7 @@ int main() {
         db.push_back(tmp);
     }
     for (auto it=db.rbegin(); it<db.rend(); it++){
-        cout << setprecision(4) << fixed << 1.0*sqrt(*it) << endl;
+        cout << setprecision(4) << fixed << sqrt(*it) << endl;
     }
     return 0;
 }

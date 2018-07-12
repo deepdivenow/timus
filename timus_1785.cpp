@@ -9,23 +9,19 @@
 using namespace std;
 
 int main() {
-    map<int,string> db{{5,"few"},
-                       {10,"several"},
-                       {20, "pack"},
-                       {50, "lots"},
-                       {100, "horde"},
-                       {250, "throng"},
-                       {500, "swarm"},
-                       {1000, "zounds"},
-                       {2001, "legion"}};
+    map<int,string> db{{4,"few"},
+                       {9,"several"},
+                       {19, "pack"},
+                       {49, "lots"},
+                       {99, "horde"},
+                       {249, "throng"},
+                       {499, "swarm"},
+                       {999, "zounds"},
+                       {2000, "legion"}};
     int num;
     while ( cin >> num ){
-        for (auto d : db){
-            if (num < d.first){
-                cout << d.second << endl;
-                break;
-            }
-        }
+        auto it=db.lower_bound(num);
+        cout << it->second << endl;
     }
     return 0;
 }
